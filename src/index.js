@@ -10,13 +10,13 @@ import 'firebase/auth';
 
 
 firebase.initializeApp({
-    apiKey: "AIzaSyC-p090UtGdj0MLvvcllcwUxLqEWar0vd0",
-    authDomain: "chat-app-7e4a2.firebaseapp.com",
-    projectId: "chat-app-7e4a2",
-    storageBucket: "chat-app-7e4a2.appspot.com",
-    messagingSenderId: "744883643809",
-    appId: "1:744883643809:web:785677d8d7b431a87817e0",
-    measurementId: "G-6PRHSV9VMZ"
+  apiKey: "AIzaSyCztl-J4tmmqYxR9bCdCHMZrtiFGYeoyZw",
+  authDomain: "form-app-2ccf1.firebaseapp.com",
+  projectId: "form-app-2ccf1",
+  storageBucket: "form-app-2ccf1.appspot.com",
+  messagingSenderId: "436376893057",
+  appId: "1:436376893057:web:7db5b029f14d099b397f80",
+  measurementId: "G-BFJX05J002"
 }
 );
 

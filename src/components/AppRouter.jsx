@@ -15,7 +15,7 @@ const AppRoute = () => {
                 {privatekRoutes.map(({ path, Component }) =>
                     <Route key={path} path={path} component={Component} exact={true} />
                 )}
-                <Redirect to='/chat' />
+                <Redirect to='/comments' />
             </Switch>
         )
         :

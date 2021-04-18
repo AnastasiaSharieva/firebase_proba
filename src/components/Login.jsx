@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { Box, Button, Container, Grid } from '@material-ui/core';
 import { Context } from '../index';
 import firebase from 'firebase';
+import { NavLink } from 'react-router-dom';
+
 
 import useStyles from '../styles';
 
@@ -14,14 +16,21 @@ const Login = () => {
         const { user } = await auth.signInWithPopup(provider);
     }
 
+    const userGuest = () => {
+        firebase.auth().signInAnonymously();
+    }
+
     const classes = useStyles();
     return (
         <Container>
-            <Grid className={classes.gridAllLogin}>
-                <Grid container className={classes.gridBox}>
-                    <Box p={5}>
-                        <Button onClick={login} variant='outlined'>
+            <Grid alignItems={'center'} justify={'center'} container className={classes.gridAllLogin}>
+                <Grid alignItems={'center'} container direction={'column'} className={classes.gridBox}>
+                    <Box p={10}>
+                        <Button onClick={login} variant='contained'>
                             Google
+                        </Button>
+                        <Button onClick={userGuest} variant='contained'>
+                            Guest
                         </Button>
                     </Box>
                 </Grid>

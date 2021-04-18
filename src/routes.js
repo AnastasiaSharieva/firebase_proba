@@ -1,5 +1,5 @@
 import Login from "./components/Login";
-import Chat from "./components/Chat";
+import Comments from "./components/Comments";
 
 
 export const publickRoutes = [
@@ -11,7 +11,7 @@ export const publickRoutes = [
 
 export const privatekRoutes = [
     {
-        path: '/chat',
-        Component: Chat,
+        path: '/comments',
+        Component: Comments,
     }
 ]

@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Context } from '../index';
+import firebase from 'firebase';
 
 
 const Navbar = () => {
@@ -12,17 +13,14 @@ const Navbar = () => {
     const [user] = useAuthState(auth);
 
     return (
-        <AppBar color='secondary' position="static">
+        <AppBar position="static">
             <Toolbar>
                 <Grid container justify={'flex-end'}>
                     {user
-
                         ?
-                        <Button onClick={() => auth.signOut()} variant={"outlined"}>Out</Button>
+                        <Button onClick={() => firebase.auth().signOut()} variant={"outlined"}>Out</Button>
                         :
-                        <NavLink to='/login'>
-                            <Button variant={"outlined"}>Login</Button>
-                        </NavLink>
+                        <NavLink to='/login' />
                     }
                 </Grid>
             </Toolbar>

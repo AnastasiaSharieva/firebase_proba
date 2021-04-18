@@ -1,25 +1,17 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   gridAllLogin: {
     height: window.innerHeight - 64,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   gridBox: {
     width: '400px',
     backgroundColor: 'lightblue',
-    alignItems: 'center',
-    flexDirection: 'column',
 
   },
-  buttons:{
-    marginTop: '40px'
-  },
 
-  boxDivChat:{
+  boxDivComm:{
     width: '80%',
     height: '70vh',
     border: '1px solid green',
